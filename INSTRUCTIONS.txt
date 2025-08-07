@@ -1,0 +1,11 @@
+Go to the All Hell Unleashed creator's website and download the ROM! https://8bitslasher.itch.io/ahu 
+ 
+Paste it into the folder along with the Mesen emulator.
+
+Run the play.sh file from your terminal with the command "bash play.sh" or "./play.sh"
+
+The executable will modify the .nes file name if it's incorrect.
+
+After completing this process, it will run Mesen with the ROM. AHU!
+
+Have fun!
