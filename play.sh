@@ -28,22 +28,20 @@
 # ······································
 # Pseudo Port for Linux (Click And Play) by Discco-Nektted
 
-
-# Verifica si el archivo Mesen existe
 if [ ! -f "./Mesen" ]; then
     echo "The program 'Mesen' is not in the current directory."
     exit 1
 fi
 
-# Asegura que Mesen tenga permisos de ejecución
+
 if [ ! -x "./Mesen" ]; then
     echo "Granting execution permissions to 'Mesen'..."
     chmod +x ./Mesen
 fi
 
-# Verifica si AllHellUnleashed.nes existe
+
 if [ ! -f "AllHellUnleashed.nes" ]; then
-    echo "📂 'AllHellUnleashed.nes' doesn't exist, looking for another .nes ROM..."
+    echo "'AllHellUnleashed.nes' doesn't exist, looking for another .nes ROM..."
 
     # Busca cualquier archivo .nes
     nes_rom=$(ls *.nes 2>/dev/null | head -n 1)
@@ -57,6 +55,6 @@ if [ ! -f "AllHellUnleashed.nes" ]; then
     mv "$nes_rom" "AllHellUnleashed.nes"
 fi
 
-# Ejecuta Mesen con la ROM
+
 echo "Run './Mesen AllHellUnleashed.nes'..."
 ./Mesen AllHellUnleashed.nes
